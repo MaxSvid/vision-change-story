@@ -1,6 +1,7 @@
-def main():
-    print("Hello from vision-change-story!")
+from fastapi import FastAPI
 
+app = FastAPI(title="Vision Change Story API")
 
-if __name__ == "__main__":
-    main()
+@app.get("/health")
+def health():
+    return {"status": "ok"}
